@@ -2,4 +2,14 @@ body {
     margin: 0;
     padding: 0;
     background: #ccc;
-  }
+}
+
+  footer {
+    background-color: var(--c5);
+    color: var(--c1);
+    width: 100%;
+    padding: 10px 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
