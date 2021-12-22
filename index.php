@@ -1,19 +1,24 @@
+<?php 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <?php include('./views/header.php') ?>
-    <script src="./scripts/general.js"></script>
-</head>
-<body>
-    <header>
-        <?php include('./views/navbar.php'); ?>  
-    </header>
-    <h1><?php echo 'Hello, World!'; ?></h1>
-    <footer>
-        <?php include('./views/footer.php') ?>
-    </footer>
-</body>
-</html>
+require_once __DIR__ . './vendor/autoload.php';
+use App\Router;
+use App\Routes\Customer;
+use App\Routes\Order;
+use App\Routes\Album;
+use App\Routes\Artist;
+use App\Routes\Track;
+define("DOMAIN", "/WebDevFinal");
+
+$router = new Router();
+
+
+// Navbar routes
+$router->get(DOMAIN . '/', function() {include("./views/home.php");});
+$router->get(DOMAIN . '/admin', function() {include("./views/admin.php");});
+$router->get(DOMAIN . '/login', function() {include("./views/login.php");});
+$router->get(DOMAIN . '/signup', function() {include("./views/signup.php");});
+
+
+$router->run();
+
+?>
