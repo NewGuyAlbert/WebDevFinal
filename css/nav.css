@@ -17,7 +17,7 @@
     text-decoration: none;
     color: #fff;
     display: block;
-    transition: .3s;
+    transition: .3s background-color;
 }
    
 .nav a:hover {
